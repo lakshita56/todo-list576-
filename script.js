@@ -74,3 +74,21 @@ addBtn.addEventListener("click", addTask);
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") addTask();
 });
+// Save tasks
+function saveTasks() {
+  localStorage.setItem("tasks", document.getElementById("taskList").innerHTML);
+}
+
+// Load tasks
+function loadTasks() {
+  let saved = localStorage.getItem("tasks");
+  if (saved) {
+      document.getElementById("taskList").innerHTML = saved;
+  }
+}
+
+// Call loadTasks when page loads
+window.onload = loadTasks;
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
