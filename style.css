@@ -1,0 +1,136 @@
+.completed {
+    /* text-decoration: none; */
+    color: gray; /* optional: make completed tasks gray */
+  }
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* ===== Body & Background ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f3cb74, #f0c848, #f85178, #fd0c7d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+    /* Gradient border */
+    border: 8px solid;
+    border-radius: 25px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #07070705, #0a090a, #0c0c0c, #140207);
+    
+
+  }
+  
+  /* ===== Gradient Animation ===== */
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* ===== Container ===== */
+  .container {
+    background-color: rgba(250, 242, 248, 0.95);
+    padding: 30px 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    
+    width: 90%;       /* responsive width */
+    max-width: 400px; /* max width for laptops */
+    text-align: center;
+  }
+  
+  /* ===== Heading ===== */
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* ===== Input & Button ===== */
+  input[type="text"] {
+    width: 70%;
+    padding: 12px;
+    border: 2px solid #fbc2eb;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  input[type="text"]:focus {
+    border-color: purple;
+  }
+  
+  button {
+    padding: 12px 18px;
+    margin-left: 5px;
+    border: pink;
+    border-radius: 10px;
+    background: rgb(253, 138, 182);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  button:hover {
+    background-position: right center;
+  }
+  
+  /* ===== Task List ===== */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+  }
+  
+  li {
+    margin-bottom: 12px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s;
+    color: #1a1a1a;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.3);
+  }
+  
+  li:nth-child(1) { background: linear-gradient(90deg, #ffecd2, #ff6f91); }
+  li:nth-child(2) { background: linear-gradient(90deg, #fbc2eb, #f9f871); }
+  li:nth-child(3) { background: linear-gradient(90deg, #ffc75f, #ff6f91); }
+  li:nth-child(4) { background: linear-gradient(90deg, #f9f871, #fbc2eb); }
+  li:nth-child(5) { background: linear-gradient(90deg, #ff6f91, #ffc75f); }
+  li:nth-child(6) { background: linear-gradient(90deg, #fbc2eb, #ffecd2); }
+  li:nth-child(7) { background: linear-gradient(90deg, #ffc75f, #f9f871); }
+  li:nth-child(8) { background: linear-gradient(90deg, #ffecd2, #fbc2eb); }
+  
+  li:hover {
+    transform: scale(1.03);
+  }
+  
+  li span {
+    flex-grow: 1;
+  }
+  
+  li button {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+  
+  li.completed {
+    opacity: 0.7;
+  }
+  
+  
