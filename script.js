@@ -86,9 +86,3 @@ function loadTasks() {
       document.getElementById("taskList").innerHTML = saved;
   }
 }
-
-// Call loadTasks when page loads
-window.onload = loadTasks;
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-}
